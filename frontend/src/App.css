@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  background: #020308;
+  color: white;
+}
+nav {
+  width: 90%;
+  margin: 0 auto 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 35px;
+
+  background: rgba(5, 8, 18, 0.9);
+  backdrop-filter: blur(15px);
+
+  border-radius: 25px;
+
+  border: 5px solid rgba(16, 42, 86, 0.8);
+
+  box-shadow:
+    0 0 25px rgba(16, 42, 86, 0.45);
+}
+
+
+nav h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #5a0018,
+    #800020,
+    #c1123f
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 15px rgba(128,0,32,0.5);
+}
+
+
+nav a {
+  margin-left: 30px;
+
+  text-decoration: none;
+
+  color: #d8c7cc;
+
+  font-size: 25px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+
+nav a:hover {
+  color: #3b82f6;
+
+  text-shadow:
+    0 0 12px rgba(59,130,246,0.8);
+}
+.container {
+  min-height: 100vh;
+  text-align: center;
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(circle at top left, #3a0714, transparent 35%),
+    radial-gradient(circle at bottom right, #101b35, transparent 40%),
+    #020308;
+}
+
+h1 {
+  margin: 0 auto;
+
+  font-family: 'Caveat', cursive;
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #050b18,
+    #163975,
+    #285a92
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-top: 40px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 23px;
+  color: #c8b6bd;
+}
+
+.card {
+  margin: 60px auto;
+
+  width: 520px;
+  max-width: 90%;
+  padding: 45px;
+
+  background: rgba(10, 5, 12, 0.9);
+
+  border-radius: 28px;
+
+  border: 5px solid rgba(140, 20, 45, 0.5);
+
+  box-shadow:
+    0 0 35px rgba(128,0,32,0.35),
+    inset 0 0 25px rgba(16,42,86,0.25);
+}
+
+.card h2 {
+  font-size: 40px;
+  color: #d46a83;
+}+
+
+.card p {
+  color: #d8c7cc;
+  line-height: 1.9;
+  font-size: 25px;
+}
+
+button {
+  margin-top: 30px;
+
+  padding: 15px 45px;
+
+  border-radius: 35px;
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #520014,
+    #9b1c3d
+  );
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 25px rgba(155,28,61,0.5);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 40px rgba(155,28,61,0.8),
+    0 0 20px rgba(27,79,138,0.5);
+}
+/* User Roles Section */
+
+.roles-section {
+  margin-top: 90px;
+  text-align: center;
+}
+
+
+.roles-section h2 {
+  font-size: 36px;
+  color: #c1123f;
+  margin-bottom: 15px;
+}
+
+
+.roles-description {
+  color: #b8b8b8;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+}
+
+
+.roles-container {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+
+  width: 80%;
+
+  margin: auto;
+}
+
+
+.role-card {
+
+  background: rgba(10, 5, 12, 0.9);
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  border: 5px solid rgba(16, 42, 86, 0.8);
+
+  box-shadow:
+    0 0 25px rgba(16, 42, 86, 0.35);
+
+  transition: 0.3s;
+}
+
+
+.role-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: #800020;
+
+  box-shadow:
+    0 0 35px rgba(128,0,32,0.5);
+}
+
+
+.role-icon {
+
+  width: 40px;
+
+  height: 40px;
+
+  color: #800020;
+
+  margin-bottom: 20px;
+
+  filter: drop-shadow(0 0 8px rgba(128,0,32,0.7));
+
+}
+
+
+.role-card h3 {
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  margin-bottom: 15px;
+}
+
+
+.role-card p {
+
+  color: #b8b8b8;
+
+  line-height: 1.6;
+
+  font-size: 15px;
+}
+/* Hero Section */
+
+.hero {
+
+  display: flex;
+  gap: 60px;
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 45px 0 70px;
+
+}
+
+
+/* Launch Button */
+
+.launch-btn {
+
+  background: linear-gradient(
+    90deg,
+    #5a0018,
+    #800020,
+    #a61c3c
+  );
+
+  color: white;
+
+  border: none;
+
+  padding: 15px 42px;
+
+  border-radius: 50px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 0 20px rgba(128,0,32,0.35);
+}
+
+
+.launch-btn:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 28px rgba(128,0,32,0.65);
+
+}
+
+
+/* Floating Animation */
+
+@keyframes floatNetwork {
+
+  0%,100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-12px);
+
+  }
+
+}
+/* Scientific Collaboration Network */
+
+.network-container {
+
+  width: 360px;
+
+  height: 330px;
+
+  background: rgba(10, 10, 15, 0.55);
+
+  border: 5px solid rgba(27,79,138,0.4);
+
+  border-radius: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 0 30px rgba(27,79,138,0.2);
+
+}
+
+
+.network-container h3 {
+
+  color: #c1123f;
+
+  margin-bottom: 20px;
+
+  font-size: 20px;
+
+}
+
+
+.graph {
+
+  position: relative;
+
+  width: 280px;
+
+  height: 220px;
+
+}
+
+
+/* Research Nodes */
+
+.research-node {
+
+  position: absolute;
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  color: white;
+
+  background: #1b4f8a;
+
+  border: 2px solid #800020;
+
+  box-shadow:
+    0 0 15px rgba(27,79,138,0.6);
+
+}
+
+
+/* Main Research Hub */
+
+.main-node {
+
+  width: 60px;
+
+  height: 60px;
+
+  top: 75px;
+
+  left: 110px;
+
+  background: #800020;
+
+}
+
+
+/* Other Nodes */
+
+.node-a {
+
+  top: 20px;
+
+  left: 40px;
+
+}
+
+
+.node-b {
+
+  top: 20px;
+
+  right: 40px;
+
+}
+
+
+.node-c {
+
+  bottom: 30px;
+
+  left: 60px;
+
+}
+
+
+.node-d {
+
+  bottom: 30px;
+
+  right: 60px;
+
+}
+
+
+/* Connection Lines */
+
+.connection {
+
+  position: absolute;
+
+  height: 2px;
+
+  background: #1b4f8a;
+
+  transform-origin: left;
+
+  opacity: 0.7;
+
+}
+
+
+.c1 {
+
+  width: 95px;
+
+  top: 95px;
+
+  left: 85px;
+
+  transform: rotate(-35deg);
+
+}
+
+
+.c2 {
+
+  width: 95px;
+
+  top: 95px;
+
+  left: 145px;
+
+  transform: rotate(35deg);
+
+}
+
+
+.c3 {
+
+  width: 90px;
+
+  top: 130px;
+
+  left: 100px;
+
+  transform: rotate(145deg);
+
+}
+
+
+.c4 {
+
+  width: 90px;
+
+  top: 130px;
+
+  left: 140px;
+
+  transform: rotate(35deg);
+
+}
+
+
+.c5 {
+
+  width: 120px;
+
+  top: 125px;
+
+  left: 80px;
+
+  transform: rotate(90deg);
+
+}
+.role-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.role-link .role-card {
+  cursor: pointer;
+}
+
+.role-link .role-card:hover {
+  transform: translateY(-8px);
+}
+/* Researchers Page */
+
+.researchers-page{
+    padding:60px;
+    text-align:center;
+}
+
+.researchers-page h1{
+    color:#c1123f;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.researchers-subtitle{
+    color:#bdbdbd;
+    margin-bottom:35px;
+}
+
+.search-box{
+    width:420px;
+    margin:0 auto 50px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#141414;
+    border:5px solid #1b4f8a;
+    border-radius:40px;
+    padding:14px 20px;
+}
+
+.search-box input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:16px;
+}
+
+.researcher-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.researcher-card{
+    background:#111;
+    border:5px solid #1b4f8a;
+    border-radius:20px;
+    padding:40px;
+    transition:.3s;
+}
+
+.researcher-card:hover{
+    transform:translateY(-8px);
+    border-color:#800020;
+}
+
+.researcher-icon{
+    color:#800020;
+    width:48px;
+    height:48px;
+    margin-bottom:20px;
+}
+/* Researchers Page */
+
+.researchers-page {
+
+  padding: 60px;
+
+  text-align: center;
+
+}
+
+
+.researchers-page h1 {
+
+  color: #c1123f;
+
+  font-size: 42px;
+
+  margin-bottom: 15px;
+
+}
+
+
+.page-description {
+
+  color: #bdbdbd;
+
+  font-size: 25px;
+
+  margin-bottom: 40px;
+
+}
+
+
+/* Search Bar */
+
+.search-box {
+
+  width: 420px;
+
+  margin: 0 auto 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: #111;
+
+  border: 5px solid #1b4f8a;
+
+  padding: 14px 22px;
+
+  border-radius: 40px;
+
+}
+
+
+.search-box input {
+
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  color: white;
+
+  width: 100%;
+
+  font-size: 25px;
+
+}
+
+
+.search-icon {
+
+  color: #800020;
+
+}
+
+
+/* Feature Cards */
+
+.researcher-features {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+}
+
+
+.feature-card {
+
+  background: rgba(15,15,20,0.8);
+
+  border: 5px solid #1b4f8a;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  transition: 0.3s;
+
+}
+
+
+.feature-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: #800020;
+
+  box-shadow:
+    0 0 20px rgba(128,0,32,0.4);
+
+}
+
+
+.feature-icon {
+
+  width: 45px;
+
+  height: 45px;
+
+  color: #800020;
+
+  margin-bottom: 20px;
+
+}
+
+
+.feature-card h3 {
+
+  color: white;
+
+  margin-bottom: 12px;
+
+}
+
+
+.feature-card p {
+
+  color: #aaa;
+
+  line-height: 1.5;
+
+}
+.institution-features {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+}
+.reviewer-features {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+}
+.admin-features {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+}
+/* Back Home Button */
+
+.back-btn {
+
+  margin: 20px;
+  margin-bottom: 35px;
+
+  padding: 12px 30px;
+
+  border-radius: 30px;
+
+  border: 1px solid #1b4f8a;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+
+}
+
+
+.back-btn:hover {
+
+  background: #800020;
+
+  border-color: #800020;
+
+}
