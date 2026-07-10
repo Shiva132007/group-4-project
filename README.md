@@ -1,1 +1,1 @@
-# group-4-project
+# Scientific-Collaboration-Network-Analyzer-Group-1
