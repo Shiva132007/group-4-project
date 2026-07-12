@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus &mdash; Scientific Collaboration Network Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- =============================================================== -->
+<!-- LANDING PAGE                                                     -->
+<!-- =============================================================== -->
+<section class="page active" id="page-landing">
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 30 30" fill="none">
+          <circle cx="8" cy="8" r="3.4" fill="#59D6C6"/>
+          <circle cx="23" cy="7" r="2.6" fill="#F2B84B"/>
+          <circle cx="21" cy="22" r="3.4" fill="#59D6C6"/>
+          <circle cx="7" cy="21" r="2.4" fill="#8C97B2"/>
+          <path d="M8 8L21 22M8 8L23 7M8 8L7 21M21 22L23 7" stroke="#3A4560" stroke-width="1.1"/>
+        </svg>
+        Nexus
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#roles">Roles</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" onclick="showPage('login')">Sign in</a>
+        <a class="btn btn-primary" onclick="showPage('register')">Create account</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Research collaboration platform</span>
+        <h1>Every co-authorship<br>is a line on the map.<br><em>Trace where yours leads.</em></h1>
+        <p class="lede">Nexus centralizes researcher profiles, publications, and institutional partnerships so your collaboration network is something you can see, not just remember.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" onclick="showPage('register')">Set up your profile &rarr;</a>
+          <a class="btn btn-ghost" onclick="showPage('login')">I already have an account</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>4</strong>account roles</div>
+          <div><strong>9</strong>platform modules</div>
+          <div><strong>01</strong>current build phase</div>
+        </div>
+      </div>
+      <div class="graph-wrap" id="graphWrap">
+        <svg id="heroGraph" viewBox="0 0 420 380"></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Platform modules</span>
+        <h2>Built in phases, used from day one.</h2>
+        <p>Sign-in and researcher profiles are live in this build. The rest of the network &mdash; publications, conferences, citations &mdash; is on the near-term roadmap.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature live">
+          <div class="status"><span class="dot"></span>Live</div>
+          <h3>Account &amp; authentication</h3>
+          <p>Role-based sign-in for researchers, institution admins, reviewers, and system admins.</p>
+        </div>
+        <div class="feature live">
+          <div class="status"><span class="dot"></span>Live</div>
+          <h3>Researcher profiles</h3>
+          <p>Departments, skills, research interests, and affiliations, kept current by the researcher.</p>
+        </div>
+        <div class="feature">
+          <div class="status"><span class="dot"></span>Planned</div>
+          <h3>Publication repository</h3>
+          <p>Journal papers, conference papers, books, and patents with status tracking.</p>
+        </div>
+        <div class="feature">
+          <div class="status"><span class="dot"></span>Planned</div>
+          <h3>Collaboration network</h3>
+          <p>Co-author records, project teams, and institutional partnerships mapped visually.</p>
+        </div>
+        <div class="feature">
+          <div class="status"><span class="dot"></span>Planned</div>
+          <h3>Conference tracking</h3>
+          <p>Registration, presentation records, and participation history in one place.</p>
+        </div>
+        <div class="feature">
+          <div class="status"><span class="dot"></span>Planned</div>
+          <h3>Citation &amp; reporting</h3>
+          <p>DOI-linked citation records and exportable institution &amp; publication reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roles" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Who it's for</span>
+        <h2>One account model, four vantage points.</h2>
+      </div>
+      <div class="roles-strip">
+        <div class="role-card"><div class="idx">R</div><h4>Researcher</h4><p>Owns a profile, tracks personal output, and builds collaborator connections.</p></div>
+        <div class="role-card"><div class="idx">IA</div><h4>Institution Admin</h4><p>Manages departments and oversees the institution's researcher roster.</p></div>
+        <div class="role-card"><div class="idx">RV</div><h4>Reviewer</h4><p>Evaluates submissions and participates in conference programme workflows.</p></div>
+        <div class="role-card"><div class="idx">SA</div><h4>System Admin</h4><p>Configures the platform and audits activity across institutions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h3>Your researcher profile is the first node.</h3>
+          <p>Create an account to register your department, skills, and interests &mdash; the foundation everything else in the network connects to.</p>
+        </div>
+        <a class="btn btn-primary" onclick="showPage('register')">Create account &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer" style="border:none; padding:0; display:flex; width:100%;">
+      <p>NEXUS &middot; SCIENTIFIC COLLABORATION NETWORK ANALYZER</p>
+      <p>FRONTEND PREVIEW &middot; NO BACKEND CONNECTED</p>
+    </div>
+  </footer>
+</section>
+
+<!-- =============================================================== -->
+<!-- LOGIN PAGE                                                       -->
+<!-- =============================================================== -->
+<section class="page" id="page-login">
+  <div class="auth-shell">
+    <div class="auth-visual">
+      <div class="brand"><svg class="brand-mark" viewBox="0 0 30 30" fill="none"><circle cx="8" cy="8" r="3.4" fill="#59D6C6"/><circle cx="23" cy="7" r="2.6" fill="#F2B84B"/><circle cx="21" cy="22" r="3.4" fill="#59D6C6"/><circle cx="7" cy="21" r="2.4" fill="#8C97B2"/><path d="M8 8L21 22M8 8L23 7M8 8L7 21M21 22L23 7" stroke="#3A4560" stroke-width="1.1"/></svg>Nexus</div>
+      <blockquote>&ldquo;A collaboration network is only as useful as the profiles that feed it.&rdquo;<cite>&mdash; Researcher onboarding notes</cite></blockquote>
+      <p style="font-size:12px; color:var(--text-faint); font-family:var(--mono);">SIGN-IN IS SIMULATED IN THIS PREVIEW &middot; NO DATA LEAVES YOUR BROWSER</p>
+    </div>
+    <div class="auth-form-side">
+      <div class="auth-card">
+        <div class="brand" style="display:none;"></div>
+        <h2>Welcome back</h2>
+        <p>Sign in to your researcher, institution, or admin account.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="field" id="loginEmailField">
+            <label for="loginEmail">Email address</label>
+            <input type="email" id="loginEmail" placeholder="you@institution.edu" autocomplete="username">
+            <div class="field-error">Enter a valid email address.</div>
+          </div>
+          <div class="field" id="loginPasswordField">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+            <div class="field-error">Password must be at least 6 characters.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        </form>
+
+        <div class="divider">or continue with</div>
+        <div class="oauth-row">
+          <button type="button" class="oauth-btn" onclick="mockOAuth('ORCID')">Continue with ORCID</button>
+          <button type="button" class="oauth-btn" onclick="mockOAuth('Institution SSO')">Continue with institution SSO</button>
+        </div>
+
+        <p class="auth-switch">Don't have an account? <a onclick="showPage('register')">Create one</a></p>
+        <p class="form-note">Demo mode &middot; any email + 6-character password signs you in</p>
+        <p class="auth-switch"><a onclick="showPage('landing')" style="color:var(--text-faint); font-weight:400;">&larr; Back to home</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== -->
+<!-- REGISTER PAGE                                                    -->
+<!-- =============================================================== -->
+<section class="page" id="page-register">
+  <div class="auth-shell">
+    <div class="auth-visual">
+      <div class="brand"><svg class="brand-mark" viewBox="0 0 30 30" fill="none"><circle cx="8" cy="8" r="3.4" fill="#59D6C6"/><circle cx="23" cy="7" r="2.6" fill="#F2B84B"/><circle cx="21" cy="22" r="3.4" fill="#59D6C6"/><circle cx="7" cy="21" r="2.4" fill="#8C97B2"/><path d="M8 8L21 22M8 8L23 7M8 8L7 21M21 22L23 7" stroke="#3A4560" stroke-width="1.1"/></svg>Nexus</div>
+      <blockquote>&ldquo;Every field you fill in now becomes a connection someone else can find later.&rdquo;<cite>&mdash; Researcher onboarding notes</cite></blockquote>
+      <p style="font-size:12px; color:var(--text-faint); font-family:var(--mono);">ACCOUNT DATA IS STORED IN MEMORY FOR THIS PREVIEW ONLY</p>
+    </div>
+    <div class="auth-form-side">
+      <div class="auth-card">
+        <h2>Create your account</h2>
+        <p>Set up sign-in and the basics of your researcher profile.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="field-row">
+            <div class="field" id="regNameField">
+              <label for="regName">Full name</label>
+              <input type="text" id="regName" placeholder="Dr. Ada Lovelace">
+              <div class="field-error">Enter your full name.</div>
+            </div>
+            <div class="field" id="regRoleField">
+              <label for="regRole">Role</label>
+              <select id="regRole">
+                <option value="">Select role</option>
+                <option>Researcher</option>
+                <option>Institution Admin</option>
+                <option>Reviewer</option>
+                <option>System Admin</option>
+              </select>
+              <div class="field-error">Select an account role.</div>
+            </div>
+          </div>
+          <div class="field" id="regEmailField">
+            <label for="regEmail">Email address</label>
+            <input type="email" id="regEmail" placeholder="you@institution.edu">
+            <div class="field-error">Enter a valid email address.</div>
+          </div>
+          <div class="field-row">
+            <div class="field" id="regInstField">
+              <label for="regInst">Institution</label>
+              <input type="text" id="regInst" placeholder="University of Cambridge">
+              <div class="field-error">Enter your institution.</div>
+            </div>
+            <div class="field" id="regDeptField">
+              <label for="regDept">Department</label>
+              <input type="text" id="regDept" placeholder="Computer Science">
+              <div class="field-error">Enter your department.</div>
+            </div>
+          </div>
+          <div class="field" id="regPasswordField">
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" placeholder="At least 6 characters">
+            <div class="field-error">Password must be at least 6 characters.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a onclick="showPage('login')">Sign in</a></p>
+        <p class="auth-switch"><a onclick="showPage('landing')" style="color:var(--text-faint); font-weight:400;">&larr; Back to home</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== -->
+<!-- APP: DASHBOARD                                                   -->
+<!-- =============================================================== -->
+<section class="page" id="page-app">
+  <div class="mobile-topnav">
+    <div class="brand" style="font-size:15px;">Nexus</div>
+    <button class="btn btn-ghost" style="padding:8px 12px;" onclick="signOut()">Sign out</button>
+  </div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><svg class="brand-mark" viewBox="0 0 30 30" fill="none"><circle cx="8" cy="8" r="3.4" fill="#59D6C6"/><circle cx="23" cy="7" r="2.6" fill="#F2B84B"/><circle cx="21" cy="22" r="3.4" fill="#59D6C6"/><circle cx="7" cy="21" r="2.4" fill="#8C97B2"/><path d="M8 8L21 22M8 8L23 7M8 8L7 21M21 22L23 7" stroke="#3A4560" stroke-width="1.1"/></svg>Nexus</div>
+
+      <div class="side-nav-item active" onclick="showApp('overview')">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Overview
+      </div>
+      <div class="side-nav-item" onclick="showApp('profile')">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.4-4 4.2-6 7.5-6s6.1 2 7.5 6"/></svg>
+        My profile
+      </div>
+
+      <div class="side-nav-section">Roadmap</div>
+      <div class="side-nav-item locked" title="Coming in a later build">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a1 1 0 0 1 1-1h9l6 6v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M14 4v5a1 1 0 0 0 1 1h5"/></svg>
+        Publications
+        <svg class="ic lock-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      </div>
+      <div class="side-nav-item locked" title="Coming in a later build">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+        Conferences
+        <svg class="ic lock-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      </div>
+      <div class="side-nav-item locked" title="Coming in a later build">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="12" cy="17" r="3"/><path d="M9 9l2 5M15 9l-2 5"/></svg>
+        Collaborators
+        <svg class="ic lock-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      </div>
+      <div class="side-nav-item locked" title="Coming in a later build">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M4 8l8-5 8 5M4 16l8 5 8-5"/></svg>
+        Reports
+        <svg class="ic lock-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      </div>
+
+      <div class="sidebar-foot">
+        <div class="mini-account">
+          <div class="avatar" id="sideAvatar">--</div>
+          <div class="who">
+            <strong id="sideName">&mdash;</strong>
+            <span id="sideRole">&mdash;</span>
+          </div>
+        </div>
+        <button class="signout" onclick="signOut()">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- OVERVIEW -->
+      <div id="app-overview">
+        <div class="topbar">
+          <div>
+            <h1 id="welcomeName">Welcome</h1>
+            <p>Here's where your collaboration network stands today.</p>
+          </div>
+          <button class="btn btn-ghost" onclick="showApp('profile')">Edit profile</button>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-card"><div class="lbl">Profile status</div><div class="val" id="statProfile" style="font-size:18px;">Incomplete</div><div class="sub">Add skills &amp; interests</div></div>
+          <div class="stat-card"><div class="lbl">Publications</div><div class="val">0</div><div class="sub">Module not yet open</div></div>
+          <div class="stat-card"><div class="lbl">Collaborators</div><div class="val">0</div><div class="sub">Module not yet open</div></div>
+          <div class="stat-card"><div class="lbl">Conferences</div><div class="val">0</div><div class="sub">Module not yet open</div></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Your profile snapshot</h3>
+            <span>Live module</span>
+          </div>
+          <div class="profile-header">
+            <div class="avatar" id="overviewAvatar">--</div>
+            <div>
+              <h2 id="overviewName">&mdash;</h2>
+              <p id="overviewMeta">&mdash;</p>
+            </div>
+          </div>
+          <div style="margin-top:18px; display:flex; gap:8px; flex-wrap:wrap;" id="overviewSkills"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h3>What's next on the roadmap</h3>
+            <span id="roadmap" style="cursor:pointer; text-decoration:underline;">&nbsp;</span>
+          </div>
+          <div class="roadmap-grid">
+            <div class="locked-panel" style="padding:22px 16px;">
+              <div class="lock-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C97B2" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+              <h4>Publications</h4>
+              <p>Upload &amp; track journal papers, books, and patents.</p>
+            </div>
+            <div class="locked-panel" style="padding:22px 16px;">
+              <div class="lock-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C97B2" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+              <h4>Collaboration</h4>
+              <p>Co-author records and project teams.</p>
+            </div>
+            <div class="locked-panel" style="padding:22px 16px;">
+              <div class="lock-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C97B2" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+              <h4>Conferences</h4>
+              <p>Registration and participation history.</p>
+            </div>
+            <div class="locked-panel" style="padding:22px 16px;">
+              <div class="lock-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C97B2" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+              <h4>Reports</h4>
+              <p>Export institution &amp; publication reports.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE -->
+      <div id="app-profile" style="display:none;">
+        <div class="topbar">
+          <div>
+            <h1>My profile</h1>
+            <p>This information is visible to collaborators across your institution.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="profile-header" style="margin-bottom:22px;">
+            <div class="avatar" id="profileAvatar">--</div>
+            <div>
+              <h2 id="profileHeadName">&mdash;</h2>
+              <p id="profileHeadMeta">&mdash;</p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="pName">Full name</label>
+              <input type="text" id="pName">
+            </div>
+            <div class="field">
+              <label for="pDept">Department</label>
+              <input type="text" id="pDept">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="pInst">Institution</label>
+              <input type="text" id="pInst">
+            </div>
+            <div class="field">
+              <label for="pOrcid">ORCID iD <span style="color:var(--text-faint); font-weight:400;">(optional)</span></label>
+              <input type="text" id="pOrcid" placeholder="0000-0000-0000-0000">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Research interests</label>
+            <div class="tag-input" id="interestsInput">
+              <input type="text" id="interestsField" placeholder="Type and press Enter">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Skills &amp; expertise</label>
+            <div class="tag-input" id="skillsInput">
+              <input type="text" id="skillsField" placeholder="Type and press Enter">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pBio">Short bio</label>
+            <textarea id="pBio" rows="4" placeholder="A couple of sentences about your work"></textarea>
+          </div>
+
+          <div class="save-bar">
+            <button class="btn btn-ghost" onclick="showApp('overview')">Cancel</button>
+            <button class="btn btn-primary" onclick="saveProfile()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
